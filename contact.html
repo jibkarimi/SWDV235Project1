@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenSuit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/contact.js" async></script>
+</head>
+
+
+<body>
+    <header>
+        <img src="images/header.jpg" alt="headerImage">
+        <nav class="navBar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news.html">E-Newsletter</a></li>
+                <li><a href="contact.aspx">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <div class="main-bg">
+            <div class="info">
+                <aside id="asideArrow">
+                    <div>
+                        <h1>**Please Contact us For custome Sizes**</h1>
+                    </div>
+                    <div><img src="images/arrow.png" id="arrow" alt="Arrow"></div>
+                </aside>
+
+
+                <form action="http://www.example.com/portfolio" method="post" enctype="text/plain">
+
+                    <br><label for="name">Name:</label><br>
+                    <input type="text" name="compName" id="fullName" placeholder="First and last name" size="30" required><br>
+
+                    <label for="email">E-mail:</label><br>
+                    <input type="text" name="contactName" id="mail"  placeholder="Example@gmail.com" size="30" required><br>
+
+                    <label for="phone">Phone:</label><br>
+                    <input type="text" name="contactName" id="phone" placeholder="(xxx)xxx-xxxx" size="30" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required><br><br>
+
+                    <fieldset id="fieldset">
+                        <legend>Suit Type!</legend>
+                        <input type="radio" name="suit" value="Custom" checked>Custom Size<br>
+                        <input type="radio" name="suit" value="fix">Fixed Sizes
+                    </fieldset><br>
+
+                    <label for="info">How did you hear about Us?</label>
+                    <select id="dropDown"> 
+                        <option label="" id="blank"></option>
+
+                        <div id="options">
+                        <optgroup label="Internet">
+                            <option label="Our Website">Website</option>
+                            <option label="Facebook Ads">Facebook</option>
+                        </optgroup>
+                        <optgroup label="Press">
+                            <option value="Magazine">Magazine</option>
+                            <option value="Newspaper">Newspaper</option>
+                        </optgroup>
+                        <optgroup label="Others"></optgroup>
+                        <option value="Frinds">Friends</option>
+                        <option value="Others">Others</option>
+                        </optgroup>
+                    </div>
+                    </select><br> <br>
+
+                    <label for="comment">Enter your comments:</label><br>
+                    <textarea cols="50" rows="10" name="comment"></textarea><br>
+
+                    <input type="submit" id="submit" value="Submit" class="btn"><br>
+                </form><br>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <br>
+        Men Suit<br>
+        <a href="mailto:jibkarimi@mycwi.cc">MenSuit@example.com</a><br>
+        <a href="https://www.facebook.com/" target="_blank"> <img src="images/fb.png" /></a>
+
+        <a href="https://github.com/" target="_blank"> <img src="images/github.png" /></a>
+
+        <a href="https://www.linkedin.com/" target="_blank"> <img src="images/linkedin.png" /></a>
+
+
+    </footer>
+</body>
+
+</html>

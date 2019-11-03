@@ -1,0 +1,268 @@
+﻿@charset "utf-8";
+
+/*
+  JIB Karimi
+  02/10/2018
+
+*/
+@import '_variables.scss';
+@import '_mixins.scss';
+
+body {
+    margin: 0%;
+
+    header {
+        width: 100%;
+        height: 120px;
+        display: block;
+        background: linear-gradient(to right, #45484d 0%, #45484d 0%, #45484d 4%, #000000 97%);
+
+        img {
+            height: 120px;
+            width: auto;
+            position: relative;
+            float: right;
+        }
+
+        nav {
+            -webkit-flex: 1 1 441px;
+            flex: 1 1 441px;
+
+            ul {
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+                -webkit-justify-content: flex-end;
+                justify-content: flex-end;
+                >li {
+                    font-size: 1.2em;
+                    line-height: 2.3em;
+                    height: 2.3em;
+                    padding: 0px 20px;
+                    list-style: none;
+                    >a {
+                        color: $white-color;
+                        display: block;
+                        width: 100%;
+                        margin-top: 50px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+body>header>nav>ul li {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+nav.navBar a {
+    color: $navBar-color;
+    text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px;
+    transform: scale(1, 1) translateY(0px);
+    transition: color 1.2 linear, text-shadow 1.2 linear, transform 1.2 linear;
+&:hover {
+    color: rgb(14, 224, 189);
+    text-shadow: rgb(0, 0, 0) 10px 20px 4px;
+    transform: scale(2, 2) translateY(-15px)
+}
+}
+/* ============ table & section styling newsPage ================= */
+section {
+    background: $white-color;
+    width: 100%;
+    height: 350px;
+    display: block;
+    overflow: scroll;
+}
+table {
+    width: 100%;
+    box-shadow: 20px 20px 50px 15px grey;
+    border-collapse: collapse;
+
+    th,td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid $black-color;
+        border-collapse: collapse;
+    }
+}
+table#t01 tr:nth-child(even) {
+    background-color:$white-color;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: $white-color;
+}
+table#t01 th {
+    background-color: $black-color;
+    color: $white-color;
+}
+
+.main-container {
+    background: url(images/wall-bg.jpg);
+    padding: 20px;
+
+    .page {
+        border-radius: 5%;
+        background-color: $white-color;
+        border: 5px $black-color;
+        border-style: double;
+
+        .text1 {
+            width: 48%;
+            margin: 0%;
+            float: left;
+            padding-top: 3%;
+            padding-left: 1%;
+        }
+        .asideSuit1 {
+            float: left;
+            width: 48%;
+            margin: 0;
+            text-align: center;
+            padding-left: 1%;
+        }
+        .text2 {
+            width: 48%;
+            margin: 0;
+            float: left;
+            padding-top: 3%;
+            padding-left: 1%;
+        }
+        .asideSuit2 {
+            float: left;
+            width: 48%;
+            margin: 0;
+            text-align: center;
+            padding-left: 1%;
+        }
+        .text3 {
+            width: 48%;
+            margin: 0;
+            float: left;
+            padding-top: 3%;
+            padding-left: 1%;
+        }
+        .asideSuit3 {
+            float: left;
+            width: 48%;
+            margin: 0;
+            text-align: center;
+            padding-left: 1%;
+        }
+        .text4 {
+            width: 48%;
+            margin: 0;
+            float: left;
+            padding-top: 3%;
+            padding-left: 1%;
+        }
+        .asideSuit4 {
+            float: left;
+            width: 48%;
+            margin: 0;
+            text-align: center;
+            padding-left: 1%;
+        }
+    }
+}
+
+
+
+/* ========== form & animation styling contactPage ===============*/
+.main-bg {
+    background: linear-gradient(to right, rgb(190, 236, 252) 0%, rgba(117, 189, 209, 1) 41%, rgba(73, 165, 191, 1) 100%);
+    margin: 0;
+    .info {
+        margin-left: 3%;
+        #asideArrow {
+            float: right;
+            margin: 100px 250px 0px 0px;
+            #arrow {
+                -webkit-filter: grayscale(75%);
+                filter: grayscale(75%);
+                margin-left: 20%;
+                position: relative;
+                height: 60px;
+                width: 100px;
+                animation: MovingArrow 3s infinite,
+                    MovingArrowLeft 3s infinite;
+            }
+        }
+    }
+}
+#radioBtn {
+    width: 20%;
+}
+
+/* ============ animation =================*/
+@keyframes MovingArrow {
+    0% {right: 0px;}
+    50% {right: 50px;}
+    100% {right: 0px;}
+}
+@keyframes MovingArrowLeft {
+    0% {left: 0px;}
+    50% {left: 50px;}
+    100%{left: 0px;}
+}
+
+/* ============ footer =================*/
+footer {
+    width: 100%;
+    background-color: $footer-bg;
+    color: $white-color;
+    text-align: center;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 480px 
+   ===============================
+*/
+// @media only screen and (max-width: 480px)
+    @include mobile-size{
+    body>header>nav>ul>li {
+        font-size: .8em;
+        line-height: 2.3em;
+        height: 2.3em;
+        padding: 0px 2px;
+        list-style: none;
+    }
+    nav.navBar a:hover {
+        transform: none;
+    }
+    table {
+        display: none;
+    }
+    #asideArrow{
+        display: none;
+    }
+    .asideSuit1, .asideSuit2, .asideSuit3, .asideSuit4{
+        padding-top: 10em; 
+    }
+    #fieldset{
+        width: 30%;
+    }
+}
+/*
+=============================================
+   Tablet styles
+=============================================
+*/
+@media only screen and (min-width: 481px) and (max-width: 680px) {
+    #asideArrow{
+        display: none;
+    }
+    .asideSuit1, .asideSuit2, .asideSuit3, .asideSuit4{
+        padding-top: 5em; 
+    }
+    body>header>nav>ul>li {
+        font-size: 1em;
+        line-height: 2.3em;
+        height: 2.3em;
+        padding: 0px 5px;
+        list-style: none;
+    }
+}
